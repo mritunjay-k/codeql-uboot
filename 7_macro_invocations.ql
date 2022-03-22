@@ -1,7 +1,7 @@
 
 import cpp
 
-from Macro m
-where m.getAnInvocation().getMacroName().regexpMatch("ntoh(s|l|ll)")
+from MacroInvocation n
+where n.getMacroName() in ["ntohs", "ntohl", "ntohll"]
 
-select m
+select n
